@@ -2,11 +2,25 @@
 
 ### Introduction to anyLogistixPLE
 
-anyLogistixPLE is 
+> anyLogistix™ (ALX™) is software for designing supply chains and managing them with a digital twin. It integrates supply chain design, optimization, and simulation with your operations data so that you can analyze and improve your network end-to-end.
+>
+> Together, simulation and optimization give you the best set of tools for tackling supply chain challenges, enabling you to gain deep insights into your company’s supply chain, in ways not possible with traditional solutions.
 
-### Final Paper(English)
+Site: https://www.anylogistix.com/what-is-alx/
 
-I will update English version soon.
+### What I have done?
+
+In this work 
+
+### How to recurrent my experiments? 
+
+Simply import these xlsx files and run experiments. To test how demand will effect server 
+
+### Introduction to usage
+
+SIM model of anyLogistixPLE
+
+
 
 ### Final Paper(Chinese)
 
