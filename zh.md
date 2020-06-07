@@ -185,6 +185,8 @@
 
 ![img](/Users/sean/Documents/Projects/My Github/Use-anyLogistixPLE-to-Simulate-Flexible-Production-Networks/img/clip_image043.png)
 
+
+
 ![img](img/clip_image120.png)
 
 ​		由于Most Inventory的策略如果同时发出，将会请求同一个DC，所有Controller的Demand的请求也是错峰发出，Lead Time设置为3小时，超出时间全部放弃订单，即没有DC能够满足订单需求，DCs的库存全部在50以内。
@@ -206,9 +208,9 @@
 
 设置运输的费用和销售的Batch。
 
-![img](img/clip_image045.png)
+![img](/Users/sean/Documents/Projects/My Github/Use-anyLogistixPLE-to-Simulate-Flexible-Production-Networks/img/clip_image045.png)
 
-![img](img/clip_image046.png)
+![img](/Users/sean/Documents/Projects/My Github/Use-anyLogistixPLE-to-Simulate-Flexible-Production-Networks/img/clip_image046.png)
 
 ## 4. 实验过程
 
