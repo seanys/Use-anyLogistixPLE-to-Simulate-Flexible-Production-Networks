@@ -1,4 +1,4 @@
-## Use-anyLogistixPLE-to-Simulate-Flexible-Production-Networks
+## Use anyLogistixPLE to Simulate Flexible Production Networks
 
 ### Introduction to anyLogistixPLE
 
@@ -10,34 +10,57 @@ Site: https://www.anylogistix.com/what-is-alx/
 
 ### What I have done?
 
-In this course design, I build different flexible production networks and compare the service level and cost under different demand distribution with anyLgoistixPLE. 
+In this course design, I build three different flexible production networks and compare the service level and transportation costs under different demand distributions with anyLgoistixPLE. 
 
-My experimental results are consistent with the results of the paper based on the research of flexible networks \[1\]\[2\], that is, the Long-Chain Mechanism can achieve the same service level as the Pooling-Mechanism.
+**My experimental results are consistent with the results of two papers on flexible production networks \[1\]\[2\], that is, the long-chain can achieve the same service level as the full-flexibility network when the production network is sysmetrical.** 
 
-<img src="/Users/sean/Documents/Projects/My Github/Use-anyLogistixPLE-to-Simulate-Flexible-Production-Networks/img/clip_image027.png" alt="img" height="400px" />
+Lyu completely compares the average workloads of distribution centers to meet the same service level in the long-chain and the full-flexibility network when the scale of networks, the service level, and the demand standard deviation change.
 
-According to my experiments, network built on long-chain mechanism can achieve almost the same service as 
+**However, this paper doesn't consider that the demand in one district consists of many demands**, such as demands from schools, communities, etc. They only treat the demand in one district as a whole, which doesn't match the actual situation. Based on this assumption, transportation cost can't be token into consideration either. **Besides, the distribution that demands of customers match is only assumed as Normal Distribution.**
 
-Besides, I make some progress based on original model.
+So I made the following improvements.
 
-The application in this paper didn't take end distribution center into consideration, 
+**(1) Modifications to Network:** We divide the demand of a district into serval demands. These demands are still serviced by certain distribution centers the same as before. 
 
-Red icons represent 
+<img src="img/clip_image026.png" alt="img" height="300px" />
 
-Consider some points th
+**(2) Modifications to Demand**: In addition to the normal distribution, we also let the uniform distribution as demand distribution. Besides, we consider the standard deviation of the Normal Distribution and the range of the Uniform Distribution as other influencing factors.
+
+Because some limitations of anyLogistixPLE, we also make other modifications. 
+
+Firstly, we only consider six **distirbution centers(Red icon)**. 
+
+Besides, PLE study version can't control the fleet size of a DC to regulate the distribution capacity, so we use the inventory of a DC to manage its distribution capacity. Every morning the inventory of a DC will be constrained below a certain value by **inventory controllers(Burgundy icon)**, and **the supplier(Green icon)** will deliver a thousand parcels to DCs. 1000 is the distribution capacity of this DC. The DC will deliver parcels to **schools, communities(Blue icon)** by day. 
+
+<img src="img/clip_image027.png" alt="img" height="400px" />
 
 [1] Lyu G, Cheung W C, Chou M C, et al. Capacity allocation in flexible production networks: Theory and applications[J]. Management Science, 2019, 65(11): 5091-5109.
+
 [2] Jordan, W. C., S. C. Graves. 1995. Principles on the benefits of manufacturing process flexibility Management Science,, 41(4), 577–594.
 
 ### How to recurrent my experiments? 
 
-Simply import these xlsx files and run experiments. To test how demand will effect server 
+Simply import these xlsx files as SIM and run experiments.
 
-SIM model of anyLogistixPLE
+### Experimental Results
 
+Every customer share independent and certain distribution with mean 100 and the distribution capacity of a DC is 1000. Then, we consider the service level and transportation costs as two evaluation criteria. 
 
+Our results match the conclusion in that paper, that is the long-chain can meet the same service level as the full-flexibility network. Besides, our experiments also reveal that the long-chain needs fewer transportation costs than the full-flexibility network.
 
-### Experiment Results
+#### Daily Service Level
+
+**Dedicated Mechanism - N(100,50^2)** 
+
+![img](/Users/sean/Documents/Projects/My Github/Use-anyLogistixPLE-to-Simulate-Flexible-Production-Networks/img/clip_image102.png)
+
+**Long Chain Mechanism - N(100,50^2)** 
+
+![img](/Users/sean/Documents/Projects/My Github/Use-anyLogistixPLE-to-Simulate-Flexible-Production-Networks/img/clip_image103.png)
+
+**Pooling Mechanism - N(100,50^2)** 
+
+![img](/Users/sean/Documents/Projects/My Github/Use-anyLogistixPLE-to-Simulate-Flexible-Production-Networks/img/clip_image104.png)
 
 #### Service Level - Uniform 
 
@@ -86,12 +109,6 @@ SIM model of anyLogistixPLE
 | Dedicated Mechanism  | 610690 USD | 611121 USD | 610456 USD |
 | Long-Chain Mechanism | 694423 USD | 694529 USD | 695722 USD |
 | Pooling Mechanism    | 764144 USD | 760989 USD | 765310 USD |
-
-#### Conclusion
-
-试验结果符合论文预期。
-
-
 
 ### Final Paper(Chinese)
 
