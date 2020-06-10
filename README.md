@@ -52,15 +52,15 @@ Our results match the conclusion in that paper, that is the long-chain can meet 
 
 **Dedicated Mechanism - N(100,50^2)** 
 
-![img](/Users/sean/Documents/Projects/My Github/Use-anyLogistixPLE-to-Simulate-Flexible-Production-Networks/img/clip_image102.png)
+![img](img/clip_image102.png)
 
 **Long Chain Mechanism - N(100,50^2)** 
 
-![img](/Users/sean/Documents/Projects/My Github/Use-anyLogistixPLE-to-Simulate-Flexible-Production-Networks/img/clip_image103.png)
+![img](img/clip_image103.png)
 
 **Pooling Mechanism - N(100,50^2)** 
 
-![img](/Users/sean/Documents/Projects/My Github/Use-anyLogistixPLE-to-Simulate-Flexible-Production-Networks/img/clip_image104.png)
+![img](img/clip_image104.png)
 
 #### Service Level - Uniform 
 
