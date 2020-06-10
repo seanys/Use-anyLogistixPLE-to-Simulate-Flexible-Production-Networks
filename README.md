@@ -14,9 +14,9 @@ In this course design, I build three different flexible production networks and 
 
 **My experimental results are consistent with the results of two papers on flexible production networks \[1\]\[2\], that is, the long-chain can achieve the same service level as the full-flexibility network when the production network is sysmetrical.** 
 
-Lyu completely compares the average workloads of distribution centers to meet the same service level in the long-chain and the full-flexibility network when the scale of networks, the service level, and the demand standard deviation change.
+Lyu completely compares the average workloads of distribution centers to meet the same service level in the long-chain and the full-flexibility network when the scale of networks, the service level, and the demand standard deviation change[1].
 
-**However, this paper doesn't consider that the demand in one district consists of many demands**, such as demands from schools, communities, etc. They only treat the demand in one district as a whole, which doesn't match the actual situation. Based on this assumption, transportation cost can't be token into consideration either. **Besides, the distribution that demands of customers match is only assumed as Normal Distribution.**
+**However, this paper doesn't consider that the demand of one district is actually composed of many demands**, such as demands from schools, communities, etc. They only treat demands in one district as a whole, which doesn't match the actual situation. Based on this assumption, transportation costs will also be difficult to be considered as evaluation criteria for different types of network. **Besides, the customer's demand distribution is only assumed as the Normal Distribution.**
 
 So I made the following improvements.
 
